@@ -2,18 +2,18 @@
 
 namespace Intro
 {
-	class Program
+	public class Program
 	{
 		static void Main(string[] args)
 		{
-			Duck myDuck = new MallardDuck();
-			myDuck.quack();
-			myDuck.swim();
-			myDuck.display();
-			myDuck = new RedheadDuck();
-			myDuck.quack();
-			myDuck.swim();
-			myDuck.display();
+			Duck[] myDucks = { new MallardDuck(), new RedheadDuck(), new RubberDuck() };
+			foreach (Duck duck in myDucks)
+			{
+				duck.display();
+				duck.quack();
+				duck.swim();
+				duck.fly();
+			}
 			Console.ReadKey();
 		}
 	}

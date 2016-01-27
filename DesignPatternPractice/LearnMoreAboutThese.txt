@@ -1,3 +1,7 @@
 structs
 delegates
 enumerations
+properties
+indexers
+events
+multidimensional arrays

@@ -4,14 +4,19 @@ namespace Intro
 {
 	public abstract class Duck
 	{
-		public void quack()
+		public virtual void quack()
 		{
 			Console.WriteLine("Quacking");
 		}
 
-		public void swim()
+		public virtual void swim()
 		{
 			Console.WriteLine("Swimming");
+		}
+
+		public virtual void fly()
+		{
+			Console.WriteLine("Flying");
 		}
 
 		public abstract void display();
