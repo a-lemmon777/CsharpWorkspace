@@ -4,12 +4,12 @@ namespace Intro
 {
 	public class RubberDuck : Duck
 	{
-		public override	void quack()
+		public override	void Quack()
 		{
 			Console.WriteLine("Squeaking");
 		}
 
-		public override void display()
+		public override void Display()
 		{
 			Console.WriteLine("Looks like a Rubber Duck");
 		}

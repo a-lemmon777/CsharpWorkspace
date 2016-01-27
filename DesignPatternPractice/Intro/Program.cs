@@ -9,10 +9,10 @@ namespace Intro
 			Duck[] myDucks = { new MallardDuck(), new RedheadDuck(), new RubberDuck() };
 			foreach (Duck duck in myDucks)
 			{
-				duck.display();
-				duck.quack();
-				duck.swim();
-				duck.fly();
+				duck.Display();
+				duck.Quack();
+				duck.Swim();
+				duck.Fly();
 			}
 			Console.ReadKey();
 		}
