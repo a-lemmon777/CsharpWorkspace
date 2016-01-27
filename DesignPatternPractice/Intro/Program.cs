@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Intro
 {
@@ -10,7 +6,14 @@ namespace Intro
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello");
+			Duck myDuck = new MallardDuck();
+			myDuck.quack();
+			myDuck.swim();
+			myDuck.display();
+			myDuck = new RedheadDuck();
+			myDuck.quack();
+			myDuck.swim();
+			myDuck.display();
 			Console.ReadKey();
 		}
 	}
