@@ -1,20 +1,21 @@
-﻿using System;
-
-namespace Intro
+﻿namespace Intro
 {
-	public class Program
-	{
-		static void Main(string[] args)
-		{
-			Duck[] myDucks = { new MallardDuck(), new RedheadDuck(), new RubberDuck() };
-			foreach (Duck duck in myDucks)
-			{
-				duck.Display();
-				duck.Quack();
-				duck.Swim();
-				duck.Fly();
-			}
-			Console.ReadKey();
-		}
-	}
+    using System;
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Duck[] myDucks = { new MallardDuck(), new RedheadDuck(), new RubberDuck(), new DecoyDuck() };
+            foreach (Duck duck in myDucks)
+            {
+                duck.Display();
+                duck.PerformQuack();
+                duck.Swim();
+                duck.PerformFly();
+            }
+
+            Console.ReadKey();
+        }
+    }
 }
