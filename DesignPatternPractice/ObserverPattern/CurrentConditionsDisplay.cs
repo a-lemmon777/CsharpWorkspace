@@ -6,24 +6,24 @@
     {
         private double temperature;
         private double humidity;
-        private ISubject weatherData;
+        private readonly WeatherData weatherData;
 
-        public CurrentConditionsDisplay(ISubject weatherData)
+        public CurrentConditionsDisplay(WeatherData weatherData)
         {
             this.weatherData = weatherData;
             weatherData.RegisterObserver(this);
         }
 
-        public void Update(double temperature, double humidity, double pressure)
+        public void Update()
         {
-            this.temperature = temperature;
-            this.humidity = humidity;
+            temperature = weatherData.Temperature;
+            humidity = weatherData.Humidity;
             Display();
         }
 
         public void Display()
         {
-            Console.WriteLine("Current conditions: {0}F degrees and {1}% humidity", this.temperature, this.humidity);
+            Console.WriteLine("Current conditions: {0}F degrees and {1}% humidity", temperature, humidity);
         }
     }
 }

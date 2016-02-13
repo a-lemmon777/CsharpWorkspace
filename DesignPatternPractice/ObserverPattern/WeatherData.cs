@@ -5,25 +5,25 @@
     public class WeatherData : ISubject
     {
         private readonly List<IObserver> observers = new List<IObserver>();
-        private double temperature;
-        private double humidity;
-        private double pressure;
+        public double Temperature { get; private set; }
+        public double Humidity { get; private set; }
+        public double Pressure { get; private set; }
 
         public void RegisterObserver(IObserver observer)
         {
-            this.observers.Add(observer);
+            observers.Add(observer);
         }
 
         public void RemoveObserver(IObserver observer)
         {
-            this.observers.Remove(observer);
+            observers.Remove(observer);
         }
 
         public void NotifyObservers()
         {
-            foreach (IObserver observer in this.observers)
+            foreach (IObserver observer in observers)
             {
-                observer.Update(this.temperature, this.humidity, this.pressure);
+                observer.Update();
             }
         }
 
@@ -34,9 +34,9 @@
 
         public void SetMeasurements(double temperature, double humidity, double pressure)
         {
-            this.temperature = temperature;
-            this.humidity = humidity;
-            this.pressure = pressure;
+            Temperature = temperature;
+            Humidity = humidity;
+            Pressure = pressure;
             MeasurementsChanged();
         }
     }

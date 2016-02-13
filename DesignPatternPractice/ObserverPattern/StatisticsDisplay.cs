@@ -8,27 +8,27 @@ namespace ObserverPattern
         private double minTemp = 200;
         private double tempSum = 0;
         private int numReadings = 0;
-        private ISubject weatherData;
+        private readonly WeatherData weatherData;
 
-        public StatisticsDisplay(ISubject weatherData)
+        public StatisticsDisplay(WeatherData weatherData)
         {
             this.weatherData = weatherData;
             weatherData.RegisterObserver(this);
         }
 
-        public void Update(double temperature, double humidity, double pressure)
+        public void Update()
         {
-            this.tempSum += temperature;
-            this.numReadings++;
+            tempSum += weatherData.Temperature;
+            numReadings++;
 
-            if (temperature > this.maxTemp)
+            if (weatherData.Temperature > maxTemp)
             {
-                this.maxTemp = temperature;
+                maxTemp = weatherData.Temperature;
             }
 
-            if (temperature < this.minTemp)
+            if (weatherData.Temperature < minTemp)
             {
-                this.minTemp = temperature;
+                minTemp = weatherData.Temperature;
             }
 
             Display();
@@ -36,7 +36,7 @@ namespace ObserverPattern
 
         public void Display()
         {
-            Console.WriteLine("Avg/Max/Min temperature = {0}/{1}/{2}", this.tempSum / this.numReadings, this.maxTemp, this.minTemp);
+            Console.WriteLine("Avg/Max/Min temperature = {0}/{1}/{2}", tempSum / numReadings, maxTemp, minTemp);
         }
     }
 }
