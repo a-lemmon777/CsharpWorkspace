@@ -8,9 +8,9 @@ namespace ObserverPattern
         private double minTemp = 200;
         private double tempSum = 0;
         private int numReadings = 0;
-        private WeatherData weatherData;
+        private ISubject weatherData;
 
-        public StatisticsDisplay(WeatherData weatherData)
+        public StatisticsDisplay(ISubject weatherData)
         {
             this.weatherData = weatherData;
             weatherData.RegisterObserver(this);

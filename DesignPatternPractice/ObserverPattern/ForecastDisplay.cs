@@ -6,9 +6,9 @@ namespace ObserverPattern
     {
         private double currentPressure = 29.92;
         private double lastPressure;
-        private WeatherData weatherData;
+        private ISubject weatherData;
 
-        public ForecastDisplay(WeatherData weatherData)
+        public ForecastDisplay(ISubject weatherData)
         {
             this.weatherData = weatherData;
             weatherData.RegisterObserver(this);
