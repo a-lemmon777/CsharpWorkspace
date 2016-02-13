@@ -1,4 +1,4 @@
-﻿namespace Intro
+﻿namespace StrategyPattern
 {
     public interface IFly
     {

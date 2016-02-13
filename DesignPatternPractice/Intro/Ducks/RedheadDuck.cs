@@ -1,4 +1,4 @@
-﻿namespace Intro
+﻿namespace StrategyPattern
 {
     using System;
 

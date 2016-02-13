@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intro", "Intro\Intro.csproj", "{1D528712-91CE-4123-A015-31878D1DC5BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern", "Intro\StrategyPattern.csproj", "{1D528712-91CE-4123-A015-31878D1DC5BC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{61815B78-4123-4F2B-885B-A0B643B41A76}"
 	ProjectSection(SolutionItems) = preProject
 		LearnMoreAboutThese.txt = LearnMoreAboutThese.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPattern", "ObserverPattern\ObserverPattern.csproj", "{23DAA96D-1E7C-4497-B4B2-7D0310D58C13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{1D528712-91CE-4123-A015-31878D1DC5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D528712-91CE-4123-A015-31878D1DC5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D528712-91CE-4123-A015-31878D1DC5BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23DAA96D-1E7C-4497-B4B2-7D0310D58C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23DAA96D-1E7C-4497-B4B2-7D0310D58C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23DAA96D-1E7C-4497-B4B2-7D0310D58C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23DAA96D-1E7C-4497-B4B2-7D0310D58C13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
